@@ -18,6 +18,7 @@ class Weapon:
     is_streak: bool = False    # Streak SRMs: all-or-nothing
     is_ultra: bool = False     # Ultra ACs: can fire twice (jam on 2)
     is_lb_x: bool = False      # LB-X ACs: can fire cluster
+    target_heat: int = 0       # heat added to target on hit (flamers)
     tonnage: float = 0         # weapon weight in tons
     crit_slots: int = 1        # critical hit slots occupied (TT standard)
 
@@ -81,7 +82,7 @@ LARGE_PULSE_LASER = Weapon(
 FLAMER = Weapon(
     name="Flamer", damage=2, heat=3,
     min_range=0, short_range=1, medium_range=2, long_range=3,
-    ammo_per_ton=None, tonnage=1,
+    ammo_per_ton=None, target_heat=2, tonnage=1,
 )
 
 

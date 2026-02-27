@@ -155,6 +155,11 @@ def resolve_attack(
         hit_events = target.apply_damage(loc, dmg, debug=debug)
         events.extend(hit_events)
 
+    # Flamer: add heat to target
+    if w.target_heat > 0:
+        target.current_heat += w.target_heat
+        events.append(f"{w.name}: +{w.target_heat} heat to {target.name}")
+
     # Ultra AC: fire second shot
     if w.is_ultra and weapon.ammo_remaining and weapon.ammo_remaining > 0:
         jam_roll = roll_2d6()
