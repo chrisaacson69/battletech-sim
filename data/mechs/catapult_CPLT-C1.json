@@ -1,0 +1,111 @@
+{
+  "name": "Catapult CPLT-C1",
+  "tonnage": 65,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 4,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 15,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 24,
+      "rear_armor": 11,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Medium Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 19,
+      "rear_armor": 8,
+      "crittable_slots": [
+        "Medium Laser",
+        "Ammo LRM-15"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 19,
+      "rear_armor": 8,
+      "crittable_slots": [
+        "Medium Laser",
+        "Ammo LRM-15"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 13,
+      "crittable_slots": [
+        "LRM-15"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 13,
+      "crittable_slots": [
+        "LRM-15"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 18,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 18,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "LRM-15",
+      "location": "LA",
+      "ammo": 8
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "CT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "CT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "LRM-15",
+      "location": "RA",
+      "ammo": 8
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 7410000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Fire Support",
+    "weight_class": "heavy"
+  }
+}

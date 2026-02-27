@@ -1,0 +1,97 @@
+{
+  "name": "Awesome AWS-8Q",
+  "tonnage": 80,
+  "walk_mp": 3,
+  "run_mp": 5,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 28,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": [
+        "Small Laser"
+      ]
+    },
+    {
+      "name": "CT",
+      "armor": 30,
+      "rear_armor": 19,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 24,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "PPC"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 24,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "PPC"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 24,
+      "crittable_slots": []
+    },
+    {
+      "name": "RA",
+      "armor": 24,
+      "crittable_slots": [
+        "PPC"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 33,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 33,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Small Laser",
+      "location": "HD"
+    },
+    {
+      "name": "PPC",
+      "location": "LT"
+    },
+    {
+      "name": "PPC",
+      "location": "RT"
+    },
+    {
+      "name": "PPC",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 9650000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Sniper & Defender",
+    "weight_class": "assault"
+  }
+}

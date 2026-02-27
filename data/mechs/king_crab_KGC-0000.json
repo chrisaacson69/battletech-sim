@@ -1,0 +1,103 @@
+{
+  "name": "King Crab KGC-0000",
+  "tonnage": 100,
+  "walk_mp": 3,
+  "run_mp": 5,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 15,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 39,
+      "rear_armor": 12,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 29,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "LRM-15",
+        "Ammo AC/20",
+        "Ammo LRM-15"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 29,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "Large Laser",
+        "Ammo AC/20"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 33,
+      "crittable_slots": [
+        "AC/20"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 33,
+      "crittable_slots": [
+        "AC/20"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 34,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 34,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AC/20",
+      "location": "LA",
+      "ammo": 5
+    },
+    {
+      "name": "LRM-15",
+      "location": "LT",
+      "ammo": 8
+    },
+    {
+      "name": "Large Laser",
+      "location": "RT"
+    },
+    {
+      "name": "AC/20",
+      "location": "RA",
+      "ammo": 5
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 12720000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Juggernaut & Close Assault",
+    "weight_class": "assault"
+  }
+}

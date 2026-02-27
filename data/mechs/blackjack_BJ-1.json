@@ -1,0 +1,110 @@
+{
+  "name": "Blackjack BJ-1",
+  "tonnage": 45,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 4,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 11,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 18,
+      "rear_armor": 9,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Ammo AC/2"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 15,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 15,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 12,
+      "crittable_slots": [
+        "Medium Laser",
+        "AC/2"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 12,
+      "crittable_slots": [
+        "Medium Laser",
+        "AC/2"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 17,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 17,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "AC/2",
+      "location": "LA",
+      "ammo": 23
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "AC/2",
+      "location": "RA",
+      "ammo": 22
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 4430000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Fire Support & Skirmisher",
+    "weight_class": "medium"
+  }
+}

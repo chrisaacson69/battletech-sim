@@ -1,0 +1,112 @@
+{
+  "name": "Highlander HGN-733",
+  "tonnage": 90,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 3,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 13,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 42,
+      "rear_armor": 17,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 28,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "LRM-20",
+        "Ammo SRM-6",
+        "Ammo SRM-6",
+        "Ammo LRM-20",
+        "Ammo LRM-20",
+        "Ammo LRM-20"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 28,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser",
+        "Ammo AC/10",
+        "Ammo AC/10"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 30,
+      "crittable_slots": [
+        "SRM-6"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 30,
+      "crittable_slots": [
+        "AC/10"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 38,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 38,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "SRM-6",
+      "location": "LA",
+      "ammo": 30
+    },
+    {
+      "name": "LRM-20",
+      "location": "LT",
+      "ammo": 18
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "AC/10",
+      "location": "RA",
+      "ammo": 20
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 10760000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Juggernaut & Heavy Cavalry",
+    "weight_class": "assault"
+  }
+}

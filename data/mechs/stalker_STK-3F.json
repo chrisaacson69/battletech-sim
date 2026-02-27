@@ -1,0 +1,135 @@
+{
+  "name": "Stalker STK-3F",
+  "tonnage": 85,
+  "walk_mp": 3,
+  "run_mp": 5,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 20,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 36,
+      "rear_armor": 11,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 25,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Large Laser",
+        "SRM-6",
+        "Ammo SRM-6"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 25,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Large Laser",
+        "SRM-6",
+        "Ammo SRM-6"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 23,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser",
+        "LRM-10",
+        "Ammo LRM-10"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 23,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser",
+        "LRM-10",
+        "Ammo LRM-10"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 25,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 25,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "LRM-10",
+      "location": "LA",
+      "ammo": 12
+    },
+    {
+      "name": "Large Laser",
+      "location": "LT"
+    },
+    {
+      "name": "SRM-6",
+      "location": "LT",
+      "ammo": 15
+    },
+    {
+      "name": "Large Laser",
+      "location": "RT"
+    },
+    {
+      "name": "SRM-6",
+      "location": "RT",
+      "ammo": 15
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "LRM-10",
+      "location": "RA",
+      "ammo": 12
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 10440000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Juggernaut & Ranged Assault",
+    "weight_class": "assault"
+  }
+}

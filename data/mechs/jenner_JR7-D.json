@@ -1,0 +1,103 @@
+{
+  "name": "Jenner JR7-D",
+  "tonnage": 35,
+  "walk_mp": 7,
+  "run_mp": 11,
+  "jump_mp": 5,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 10,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 7,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 10,
+      "rear_armor": 3,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "SRM-4"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 8,
+      "rear_armor": 4,
+      "crittable_slots": []
+    },
+    {
+      "name": "RT",
+      "armor": 8,
+      "rear_armor": 4,
+      "crittable_slots": [
+        "Ammo SRM-4"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 4,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 4,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 6,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 6,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "SRM-4",
+      "location": "CT",
+      "ammo": 25
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 3960000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Fast Striker Cavalry",
+    "weight_class": "light"
+  }
+}

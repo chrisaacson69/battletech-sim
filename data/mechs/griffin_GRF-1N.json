@@ -1,0 +1,88 @@
+{
+  "name": "Griffin GRF-1N",
+  "tonnage": 55,
+  "walk_mp": 5,
+  "run_mp": 8,
+  "jump_mp": 5,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 12,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 20,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 20,
+      "rear_armor": 6,
+      "crittable_slots": []
+    },
+    {
+      "name": "RT",
+      "armor": 20,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "LRM-10",
+        "Ammo LRM-10",
+        "Ammo LRM-10"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 14,
+      "crittable_slots": []
+    },
+    {
+      "name": "RA",
+      "armor": 14,
+      "crittable_slots": [
+        "PPC"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 18,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 18,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "LRM-10",
+      "location": "RT",
+      "ammo": 24
+    },
+    {
+      "name": "PPC",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 6260000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Sniper & Fire Support",
+    "weight_class": "medium"
+  }
+}

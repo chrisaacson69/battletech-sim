@@ -1,0 +1,93 @@
+{
+  "name": "Locust LCT-1V",
+  "tonnage": 20,
+  "walk_mp": 8,
+  "run_mp": 12,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 10,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 8,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 10,
+      "rear_armor": 2,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Medium Laser",
+        "Ammo Machine Gun"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 8,
+      "rear_armor": 2,
+      "crittable_slots": []
+    },
+    {
+      "name": "RT",
+      "armor": 8,
+      "rear_armor": 2,
+      "crittable_slots": []
+    },
+    {
+      "name": "LA",
+      "armor": 4,
+      "crittable_slots": [
+        "Machine Gun"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 4,
+      "crittable_slots": [
+        "Machine Gun"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 8,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 8,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Machine Gun",
+      "location": "LA",
+      "ammo": 100
+    },
+    {
+      "name": "Medium Laser",
+      "location": "CT"
+    },
+    {
+      "name": "Machine Gun",
+      "location": "RA",
+      "ammo": 100
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 1890000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Light Fire Support",
+    "weight_class": "light"
+  }
+}

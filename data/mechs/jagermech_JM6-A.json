@@ -1,0 +1,114 @@
+{
+  "name": "JagerMech JM6-A",
+  "tonnage": 65,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 10,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 20,
+      "rear_armor": 5,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 17,
+      "rear_armor": 3,
+      "crittable_slots": [
+        "Medium Laser",
+        "Ammo AC/2",
+        "Ammo LRM-15"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 17,
+      "rear_armor": 3,
+      "crittable_slots": [
+        "Medium Laser",
+        "Ammo LRM-15"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 11,
+      "crittable_slots": [
+        "AC/2",
+        "LRM-15"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 11,
+      "crittable_slots": [
+        "AC/2",
+        "LRM-15"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 16,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 16,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AC/2",
+      "location": "LA",
+      "ammo": 23
+    },
+    {
+      "name": "LRM-15",
+      "location": "LA",
+      "ammo": 8
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "AC/2",
+      "location": "RA",
+      "ammo": 22
+    },
+    {
+      "name": "LRM-15",
+      "location": "RA",
+      "ammo": 8
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 7010000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Fire Support",
+    "weight_class": "heavy"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "UrbanMech UM-R60",
+  "tonnage": 30,
+  "walk_mp": 2,
+  "run_mp": 3,
+  "jump_mp": 2,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 11,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 11,
+      "rear_armor": 8,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 8,
+      "rear_armor": 4,
+      "crittable_slots": []
+    },
+    {
+      "name": "RT",
+      "armor": 8,
+      "rear_armor": 4,
+      "crittable_slots": [
+        "Ammo AC/10"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 10,
+      "crittable_slots": [
+        "Small Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 10,
+      "crittable_slots": [
+        "AC/10"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 12,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 12,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Small Laser",
+      "location": "LA"
+    },
+    {
+      "name": "AC/10",
+      "location": "RA",
+      "ammo": 10
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 2480000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Defender",
+    "weight_class": "light"
+  }
+}

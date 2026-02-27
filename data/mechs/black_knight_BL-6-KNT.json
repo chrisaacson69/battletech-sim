@@ -1,0 +1,118 @@
+{
+  "name": "Black Knight BL-6-KNT",
+  "tonnage": 75,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 20,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": [
+        "Small Laser"
+      ]
+    },
+    {
+      "name": "CT",
+      "armor": 25,
+      "rear_armor": 8,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 20,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Large Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 20,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Large Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 20,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 20,
+      "crittable_slots": [
+        "Medium Laser",
+        "PPC"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 20,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 20,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Small Laser",
+      "location": "HD"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Large Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Large Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "PPC",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 9370000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Brawler & Ranged Assault",
+    "weight_class": "heavy"
+  }
+}

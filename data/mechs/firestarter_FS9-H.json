@@ -1,0 +1,120 @@
+{
+  "name": "Firestarter FS9-H",
+  "tonnage": 35,
+  "walk_mp": 6,
+  "run_mp": 9,
+  "jump_mp": 6,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 10,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 13,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Flamer",
+        "Flamer"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 11,
+      "rear_armor": 5,
+      "crittable_slots": [
+        "Machine Gun"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 11,
+      "rear_armor": 5,
+      "crittable_slots": [
+        "Machine Gun",
+        "Ammo Machine Gun"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 6,
+      "crittable_slots": [
+        "Medium Laser",
+        "Flamer"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 6,
+      "crittable_slots": [
+        "Medium Laser",
+        "Flamer"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 8,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 8,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Flamer",
+      "location": "LA"
+    },
+    {
+      "name": "Machine Gun",
+      "location": "LT",
+      "ammo": 100
+    },
+    {
+      "name": "Flamer",
+      "location": "CT"
+    },
+    {
+      "name": "Flamer",
+      "location": "CT"
+    },
+    {
+      "name": "Machine Gun",
+      "location": "RT",
+      "ammo": 100
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    },
+    {
+      "name": "Flamer",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 4090000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Scout & Disabler",
+    "weight_class": "light"
+  }
+}

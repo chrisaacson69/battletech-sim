@@ -1,0 +1,108 @@
+{
+  "name": "Thunderbolt TDR-5SS",
+  "tonnage": 65,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 21,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 30,
+      "rear_armor": 11,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Ammo SRM-6"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 24,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser",
+        "Medium Laser",
+        "SRM-6"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 24,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Flamer"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 20,
+      "crittable_slots": []
+    },
+    {
+      "name": "RA",
+      "armor": 20,
+      "crittable_slots": [
+        "PPC"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 29,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 29,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "SRM-6",
+      "location": "LT",
+      "ammo": 15
+    },
+    {
+      "name": "Flamer",
+      "location": "RT"
+    },
+    {
+      "name": "PPC",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 7760000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Striker & Disabler",
+    "weight_class": "heavy"
+  }
+}

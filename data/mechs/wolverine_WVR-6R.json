@@ -1,0 +1,38 @@
+{
+  "name": "Wolverine WVR-6R",
+  "tonnage": 55,
+  "walk_mp": 5,
+  "run_mp": 8,
+  "jump_mp": 5,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 12,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {"name": "HD", "armor": 9, "crittable_slots": []},
+    {"name": "CT", "armor": 26, "rear_armor": 8, "crittable_slots": ["Engine", "Engine", "Engine"]},
+    {"name": "LT", "armor": 20, "rear_armor": 6, "crittable_slots": ["SRM-6", "Ammo SRM-6"]},
+    {"name": "RT", "armor": 20, "rear_armor": 6, "crittable_slots": ["Ammo AC/5"]},
+    {"name": "LA", "armor": 18, "crittable_slots": ["Medium Laser"]},
+    {"name": "RA", "armor": 18, "crittable_slots": ["AC/5"]},
+    {"name": "LL", "armor": 22, "crittable_slots": []},
+    {"name": "RL", "armor": 22, "crittable_slots": []}
+  ],
+  "weapons": [
+    {"name": "AC/5", "location": "RA", "ammo": 20},
+    {"name": "SRM-6", "location": "LT", "ammo": 15},
+    {"name": "Medium Laser", "location": "LA"},
+    {"name": "Medium Laser", "location": "HD"}
+  ],
+  "metadata": {
+    "source": "manual",
+    "bv2": null,
+    "cost_cbills": null,
+    "tech_base": "Inner Sphere",
+    "year_introduced": 2575,
+    "era": "Star League",
+    "role": "Skirmisher",
+    "weight_class": "medium"
+  }
+}

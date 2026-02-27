@@ -1,0 +1,116 @@
+{
+  "name": "Shadow Hawk SHD-2D",
+  "tonnage": 55,
+  "walk_mp": 5,
+  "run_mp": 8,
+  "jump_mp": 3,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 14,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 6,
+      "crittable_slots": [
+        "SRM-2"
+      ]
+    },
+    {
+      "name": "CT",
+      "armor": 12,
+      "rear_armor": 6,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "SRM-2"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 9,
+      "rear_armor": 5,
+      "crittable_slots": [
+        "AC/5",
+        "Ammo AC/5",
+        "Ammo SRM-2"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 9,
+      "rear_armor": 5,
+      "crittable_slots": [
+        "LRM-5",
+        "Ammo LRM-5",
+        "Ammo SRM-2"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 5,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 5,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 5,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 5,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "SRM-2",
+      "location": "HD",
+      "ammo": 50
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "AC/5",
+      "location": "LT",
+      "ammo": 20
+    },
+    {
+      "name": "SRM-2",
+      "location": "CT",
+      "ammo": 50
+    },
+    {
+      "name": "LRM-5",
+      "location": "RT",
+      "ammo": 24
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 6240000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Striker Cavalry",
+    "weight_class": "medium"
+  }
+}

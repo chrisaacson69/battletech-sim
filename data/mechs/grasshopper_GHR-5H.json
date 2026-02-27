@@ -1,0 +1,110 @@
+{
+  "name": "Grasshopper GHR-5H",
+  "tonnage": 70,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 4,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 22,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": [
+        "LRM-5"
+      ]
+    },
+    {
+      "name": "CT",
+      "armor": 30,
+      "rear_armor": 13,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "Large Laser"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 20,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 20,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "Medium Laser",
+        "Ammo LRM-5"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 22,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 22,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 26,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 26,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "LRM-5",
+      "location": "HD",
+      "ammo": 24
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LT"
+    },
+    {
+      "name": "Large Laser",
+      "location": "CT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 8830000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Skirmisher & Cavalry",
+    "weight_class": "heavy"
+  }
+}

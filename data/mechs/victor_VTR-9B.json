@@ -1,0 +1,103 @@
+{
+  "name": "Victor VTR-9B",
+  "tonnage": 80,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 4,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 15,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 30,
+      "rear_armor": 15,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 20,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "SRM-4",
+        "Ammo SRM-4"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 20,
+      "rear_armor": 10,
+      "crittable_slots": [
+        "Ammo AC/20",
+        "Ammo AC/20",
+        "Ammo AC/20"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 15,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 15,
+      "crittable_slots": [
+        "AC/20"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 20,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 20,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "SRM-4",
+      "location": "LT",
+      "ammo": 25
+    },
+    {
+      "name": "AC/20",
+      "location": "RA",
+      "ammo": 15
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 9560000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Heavy Cavalry",
+    "weight_class": "assault"
+  }
+}

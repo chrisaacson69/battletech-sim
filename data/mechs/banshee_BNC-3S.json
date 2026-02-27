@@ -1,0 +1,44 @@
+{
+  "name": "Banshee BNC-3S",
+  "tonnage": 95,
+  "walk_mp": 3,
+  "run_mp": 5,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 21,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {"name": "HD", "armor": 9, "crittable_slots": ["Small Laser"]},
+    {"name": "CT", "armor": 40, "rear_armor": 17, "crittable_slots": ["Engine", "Engine", "Engine", "Small Laser"]},
+    {"name": "LT", "armor": 26, "rear_armor": 10, "crittable_slots": ["AC/10", "Ammo AC/10", "Ammo AC/10"]},
+    {"name": "RT", "armor": 26, "rear_armor": 10, "crittable_slots": ["SRM-6", "Ammo SRM-6", "PPC", "Medium Laser", "Medium Laser", "Medium Laser", "Medium Laser"]},
+    {"name": "LA", "armor": 21, "crittable_slots": ["PPC"]},
+    {"name": "RA", "armor": 21, "crittable_slots": []},
+    {"name": "LL", "armor": 30, "crittable_slots": []},
+    {"name": "RL", "armor": 30, "crittable_slots": []}
+  ],
+  "weapons": [
+    {"name": "PPC", "location": "LA"},
+    {"name": "PPC", "location": "RT"},
+    {"name": "AC/10", "location": "LT", "ammo": 20},
+    {"name": "SRM-6", "location": "RT", "ammo": 15},
+    {"name": "Medium Laser", "location": "RT"},
+    {"name": "Medium Laser", "location": "RT"},
+    {"name": "Medium Laser", "location": "RT"},
+    {"name": "Medium Laser", "location": "RT"},
+    {"name": "Small Laser", "location": "HD"},
+    {"name": "Small Laser", "location": "CT"}
+  ],
+  "metadata": {
+    "source": "manual",
+    "bv2": 1323,
+    "cost_cbills": null,
+    "tech_base": "Inner Sphere",
+    "year_introduced": 3026,
+    "era": "Succession Wars",
+    "role": "Sniper",
+    "weight_class": "assault"
+  }
+}

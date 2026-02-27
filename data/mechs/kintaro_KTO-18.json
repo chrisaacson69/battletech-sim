@@ -1,0 +1,115 @@
+{
+  "name": "Kintaro KTO-18",
+  "tonnage": 55,
+  "walk_mp": 5,
+  "run_mp": 8,
+  "jump_mp": 0,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 10,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 26,
+      "rear_armor": 9,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "SRM-6"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 18,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Ammo LRM-5",
+        "Ammo SRM-6"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 18,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "SRM-6",
+        "Ammo SRM-6",
+        "Ammo SRM-6"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 18,
+      "crittable_slots": [
+        "LRM-5",
+        "SRM-6",
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 18,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 23,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 23,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "LRM-5",
+      "location": "LA",
+      "ammo": 24
+    },
+    {
+      "name": "SRM-6",
+      "location": "LA",
+      "ammo": 15
+    },
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "SRM-6",
+      "location": "CT",
+      "ammo": 15
+    },
+    {
+      "name": "SRM-6",
+      "location": "RT",
+      "ammo": 15
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 6270000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Juggernaut & Close Assault",
+    "weight_class": "medium"
+  }
+}

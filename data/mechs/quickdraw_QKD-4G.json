@@ -1,0 +1,111 @@
+{
+  "name": "Quickdraw QKD-4G",
+  "tonnage": 60,
+  "walk_mp": 5,
+  "run_mp": 8,
+  "jump_mp": 5,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 13,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 17,
+      "rear_armor": 8,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine",
+        "SRM-4"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 14,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "LRM-10",
+        "Ammo LRM-10"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 14,
+      "rear_armor": 7,
+      "crittable_slots": [
+        "Medium Laser",
+        "Medium Laser",
+        "Ammo SRM-4"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 11,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 11,
+      "crittable_slots": [
+        "Medium Laser"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 15,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 15,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Medium Laser",
+      "location": "LA"
+    },
+    {
+      "name": "LRM-10",
+      "location": "LT",
+      "ammo": 12
+    },
+    {
+      "name": "SRM-4",
+      "location": "CT",
+      "ammo": 25
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RT"
+    },
+    {
+      "name": "Medium Laser",
+      "location": "RA"
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 6970000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Striker Cavalry",
+    "weight_class": "heavy"
+  }
+}

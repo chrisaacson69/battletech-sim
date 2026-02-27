@@ -1,0 +1,94 @@
+{
+  "name": "Enforcer ENF-4R",
+  "tonnage": 50,
+  "walk_mp": 4,
+  "run_mp": 6,
+  "jump_mp": 4,
+  "gunnery": 4,
+  "piloting": 5,
+  "heat_sinks": 12,
+  "double_heat_sinks": false,
+  "engine_type": "standard",
+  "locations": [
+    {
+      "name": "HD",
+      "armor": 9,
+      "crittable_slots": []
+    },
+    {
+      "name": "CT",
+      "armor": 23,
+      "rear_armor": 4,
+      "crittable_slots": [
+        "Engine",
+        "Engine",
+        "Engine"
+      ]
+    },
+    {
+      "name": "LT",
+      "armor": 17,
+      "rear_armor": 3,
+      "crittable_slots": [
+        "Small Laser"
+      ]
+    },
+    {
+      "name": "RT",
+      "armor": 17,
+      "rear_armor": 3,
+      "crittable_slots": [
+        "Ammo AC/10"
+      ]
+    },
+    {
+      "name": "LA",
+      "armor": 14,
+      "crittable_slots": [
+        "Large Laser"
+      ]
+    },
+    {
+      "name": "RA",
+      "armor": 14,
+      "crittable_slots": [
+        "AC/10"
+      ]
+    },
+    {
+      "name": "LL",
+      "armor": 20,
+      "crittable_slots": []
+    },
+    {
+      "name": "RL",
+      "armor": 20,
+      "crittable_slots": []
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Large Laser",
+      "location": "LA"
+    },
+    {
+      "name": "Small Laser",
+      "location": "LT"
+    },
+    {
+      "name": "AC/10",
+      "location": "RA",
+      "ammo": 10
+    }
+  ],
+  "metadata": {
+    "source": "hbs",
+    "bv2": null,
+    "cost_cbills": 5160000,
+    "tech_base": "Inner Sphere",
+    "year_introduced": null,
+    "era": null,
+    "role": "Fire Support & Skirmisher",
+    "weight_class": "medium"
+  }
+}
