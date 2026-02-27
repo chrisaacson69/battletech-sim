@@ -68,6 +68,8 @@ def main():
                         help="Iterations per profile for soak test (default: 10000)")
     parser.add_argument("--case", action="store_true",
                         help="Auto-CASE on all locations (HBS rules, soak test only)")
+    parser.add_argument("--heat-factor", type=float, default=1.0,
+                        help="Heat dissipation multiplier (default: 1.0, e.g. 0.5 for desert)")
     args = parser.parse_args()
 
     # Resolve movement mode and closing rate
@@ -151,7 +153,8 @@ def main():
         b = mech_b.copy()
         result = fight(a, b, distance=args.distance, max_rounds=args.max_rounds,
                        debug=True, closing_rate=closing_rate,
-                       movement_ai=movement_ai)
+                       movement_ai=movement_ai,
+                       heat_factor=args.heat_factor)
         print(f"\n{'='*60}")
         print(f"  {mech_a.name} vs {mech_b.name}")
         print(f"  Starting distance: {args.distance} hexes")
@@ -181,7 +184,8 @@ def main():
         result = monte_carlo(mech_a, mech_b, n=args.fights,
                              distance=args.distance, max_rounds=args.max_rounds,
                              closing_rate=closing_rate,
-                             movement_ai=movement_ai)
+                             movement_ai=movement_ai,
+                             heat_factor=args.heat_factor)
         elapsed = time.time() - start
 
         print(f"{'='*60}")

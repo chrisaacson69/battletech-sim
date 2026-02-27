@@ -1,4 +1,4 @@
-"""Round-robin assault mech tournament across ranges and gunnery levels."""
+"""Round-robin mech tournament across ranges and gunnery levels."""
 
 import argparse
 import sys
@@ -19,7 +19,8 @@ WEIGHT_CLASS = "assault"
 def run_tournament(mechs: dict, gunnery: int, distance: int,
                    fights: int = FIGHTS_PER_MATCHUP,
                    closing_rate: int = 1,
-                   movement_ai: str = "closure") -> dict:
+                   movement_ai: str = "closure",
+                   heat_factor: float = 1.0) -> dict:
     """Run round-robin and return {mech_name: {wins, losses, draws, avg_rounds, damage_dealt, damage_taken}}."""
     names = sorted(mechs.keys())
     stats = {
@@ -42,7 +43,8 @@ def run_tournament(mechs: dict, gunnery: int, distance: int,
             result = monte_carlo(mech_a, mech_b, n=fights,
                                  distance=distance, max_rounds=MAX_ROUNDS,
                                  closing_rate=closing_rate,
-                                 movement_ai=movement_ai)
+                                 movement_ai=movement_ai,
+                                 heat_factor=heat_factor)
 
             stats[name_a]["wins"] += result.mech_a_wins
             stats[name_a]["losses"] += result.mech_b_wins
@@ -73,7 +75,9 @@ def run_tournament(mechs: dict, gunnery: int, distance: int,
 
 def format_standings(stats: dict, gunnery: int, distance: int,
                      closing_rate: int = 1, fights: int = FIGHTS_PER_MATCHUP,
-                     movement_ai: str = "closure") -> str:
+                     movement_ai: str = "closure",
+                     weight_class: str = "assault",
+                     heat_factor: float = 1.0) -> str:
     """Format tournament standings table."""
     lines = []
     lines.append(f"\n{'='*80}")
@@ -83,8 +87,9 @@ def format_standings(stats: dict, gunnery: int, distance: int,
         mode_label = "Static"
     else:
         mode_label = f"Closing: {closing_rate}/round"
-    lines.append(f"  ASSAULT TOURNAMENT — Distance: {distance} hexes, Gunnery: {gunnery}, "
-                 f"{mode_label}")
+    heat_label = f", Heat: {heat_factor}x" if heat_factor != 1.0 else ""
+    lines.append(f"  {weight_class.upper()} TOURNAMENT — Distance: {distance} hexes, Gunnery: {gunnery}, "
+                 f"{mode_label}{heat_label}")
     lines.append(f"  {fights} fights per matchup, {len(stats)} mechs, "
                  f"{len(stats) * (len(stats)-1) // 2} matchups")
     lines.append(f"{'='*80}")
@@ -144,7 +149,7 @@ def format_comparison(all_results: dict) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Round-robin assault mech tournament")
+    parser = argparse.ArgumentParser(description="Round-robin mech tournament")
     parser.add_argument("--movement", type=str,
                         choices=["static", "closure", "optimal"],
                         default="closure",
@@ -154,10 +159,13 @@ def main():
     parser.add_argument("--filter-weight", type=str,
                         choices=["light", "medium", "heavy", "assault"],
                         default="assault", help="Weight class filter (default: assault)")
+    parser.add_argument("--heat-factor", type=float, default=1.0,
+                        help="Heat dissipation multiplier (default: 1.0, e.g. 0.5 for desert)")
     args = parser.parse_args()
 
     movement_ai = args.movement
     closing_rate = 0 if movement_ai == "static" else 1
+    heat_factor = args.heat_factor
 
     data_path = Path(__file__).parent / "data" / "mechs"
     all_mechs = load_mechs_from_directory(data_path)
@@ -174,7 +182,8 @@ def main():
         mode_label = "static"
     else:
         mode_label = f"closure ({closing_rate}/round)"
-    print(f"Movement: {mode_label}, {args.fights} fights per matchup")
+    heat_label = f", heat: {heat_factor}x" if heat_factor != 1.0 else ""
+    print(f"Movement: {mode_label}, {args.fights} fights per matchup{heat_label}")
 
     all_results = {}
     total_start = time.time()
@@ -186,14 +195,17 @@ def main():
             stats = run_tournament(mechs, gunnery, distance,
                                    fights=args.fights,
                                    closing_rate=closing_rate,
-                                   movement_ai=movement_ai)
+                                   movement_ai=movement_ai,
+                                   heat_factor=heat_factor)
             elapsed = time.time() - start
 
             all_results[(gunnery, distance)] = stats
             print(format_standings(stats, gunnery, distance,
                                    closing_rate=closing_rate,
                                    fights=args.fights,
-                                   movement_ai=movement_ai))
+                                   movement_ai=movement_ai,
+                                   weight_class=args.filter_weight,
+                                   heat_factor=heat_factor))
             print(f"\n  Completed in {elapsed:.1f}s")
 
     # A/B Comparison

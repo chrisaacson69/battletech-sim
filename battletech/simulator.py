@@ -60,7 +60,8 @@ class MonteCarloResult:
         return a_score / b_score
 
 
-def select_weapons_to_fire(mech: Mech, distance: int) -> list:
+def select_weapons_to_fire(mech: Mech, distance: int,
+                           heat_factor: float = 1.0) -> list:
     """Weapon selection AI: sort by damage/heat efficiency, fire within heat budget.
 
     Strategy: collect all in-range weapons, sort by damage-per-heat (descending),
@@ -93,7 +94,7 @@ def select_weapons_to_fire(mech: Mech, distance: int) -> list:
 
     available.sort(key=weapon_efficiency, reverse=True)
 
-    dissipation = calculate_heat_dissipation(mech)
+    dissipation = calculate_heat_dissipation(mech, heat_factor)
 
     # Account for movement heat already committed this round
     movement_heat = 0
@@ -133,7 +134,8 @@ def choose_movement(mech: Mech) -> tuple[str, int]:
     return "walk", effective_walk
 
 
-def heat_neutral_dpr(mech: Mech, distance: int) -> float:
+def heat_neutral_dpr(mech: Mech, distance: int,
+                     heat_factor: float = 1.0) -> float:
     """Compute heat-neutral damage per round at a given distance.
 
     Fractional weapon firing: if total weapon heat exceeds dissipation,
@@ -158,12 +160,13 @@ def heat_neutral_dpr(mech: Mech, distance: int) -> float:
     if total_heat <= 0:
         return float(total_dmg)
 
-    dissipation = calculate_heat_dissipation(mech)
+    dissipation = calculate_heat_dissipation(mech, heat_factor)
     return total_dmg * min(1.0, dissipation / total_heat)
 
 
 def find_preferred_range(mech: Mech, opponent: Mech,
-                         max_range: int = 30) -> int:
+                         max_range: int = 30,
+                         heat_factor: float = 1.0) -> int:
     """Find range where mech has best DPR advantage over opponent.
 
     If outgunned at all ranges, picks the range with the smallest deficit.
@@ -172,7 +175,7 @@ def find_preferred_range(mech: Mech, opponent: Mech,
     best_advantage = -999.0
 
     for r in range(1, max_range + 1):
-        advantage = heat_neutral_dpr(mech, r) - heat_neutral_dpr(opponent, r)
+        advantage = heat_neutral_dpr(mech, r, heat_factor) - heat_neutral_dpr(opponent, r, heat_factor)
         if advantage > best_advantage:
             best_advantage = advantage
             best_range = r
@@ -181,7 +184,8 @@ def find_preferred_range(mech: Mech, opponent: Mech,
 
 
 def optimal_movement(mech_a: Mech, mech_b: Mech,
-                     current_distance: int) -> tuple:
+                     current_distance: int,
+                     heat_factor: float = 1.0) -> tuple:
     """Compute movement for optimal range management.
 
     Simple reactive rule based on who is winning the current exchange:
@@ -194,8 +198,8 @@ def optimal_movement(mech_a: Mech, mech_b: Mech,
 
     Returns (a_mode, a_hexes, b_mode, b_hexes, new_distance).
     """
-    dpr_a = heat_neutral_dpr(mech_a, current_distance)
-    dpr_b = heat_neutral_dpr(mech_b, current_distance)
+    dpr_a = heat_neutral_dpr(mech_a, current_distance, heat_factor)
+    dpr_b = heat_neutral_dpr(mech_b, current_distance, heat_factor)
 
     mp_pen_a = get_heat_mp_penalty(mech_a.current_heat)
     mp_pen_b = get_heat_mp_penalty(mech_b.current_heat)
@@ -227,7 +231,8 @@ def optimal_movement(mech_a: Mech, mech_b: Mech,
 def fight(mech_a: Mech, mech_b: Mech, distance: int = 6,
           max_rounds: int = 50, debug: bool = False,
           closing_rate: int = 0,
-          movement_ai: str = "closure") -> FightResult:
+          movement_ai: str = "closure",
+          heat_factor: float = 1.0) -> FightResult:
     """Run a single fight between two mechs.
 
     Args:
@@ -259,7 +264,7 @@ def fight(mech_a: Mech, mech_b: Mech, distance: int = 6,
         # --- Movement Phase ---
         if movement_ai == "optimal":
             a_mode, a_hexes, b_mode, b_hexes, new_dist = optimal_movement(
-                mech_a, mech_b, current_distance)
+                mech_a, mech_b, current_distance, heat_factor)
         else:
             a_mode, a_hexes = choose_movement(mech_a)
             b_mode, b_hexes = choose_movement(mech_b)
@@ -272,8 +277,8 @@ def fight(mech_a: Mech, mech_b: Mech, distance: int = 6,
 
         if movement_ai == "optimal":
             if debug:
-                pref_a = find_preferred_range(mech_a, mech_b)
-                pref_b = find_preferred_range(mech_b, mech_a)
+                pref_a = find_preferred_range(mech_a, mech_b, heat_factor=heat_factor)
+                pref_b = find_preferred_range(mech_b, mech_a, heat_factor=heat_factor)
                 log.append(f"  {mech_a.name}: {a_mode} ({a_hexes} hexes) wants range {pref_a}")
                 log.append(f"  {mech_b.name}: {b_mode} ({b_hexes} hexes) wants range {pref_b}")
                 log.append(f"  Distance: {current_distance} -> {new_dist}")
@@ -283,8 +288,8 @@ def fight(mech_a: Mech, mech_b: Mech, distance: int = 6,
             log.append(f"  {mech_b.name}: {b_mode} ({b_hexes} hexes)")
 
         # --- Weapon Selection Phase ---
-        a_weapons = select_weapons_to_fire(mech_a, current_distance)
-        b_weapons = select_weapons_to_fire(mech_b, current_distance)
+        a_weapons = select_weapons_to_fire(mech_a, current_distance, heat_factor)
+        b_weapons = select_weapons_to_fire(mech_b, current_distance, heat_factor)
 
         if debug:
             log.append(f"  {mech_a.name} fires: {[w.weapon.name for w in a_weapons]}")
@@ -310,12 +315,12 @@ def fight(mech_a: Mech, mech_b: Mech, distance: int = 6,
 
         # --- Heat Phase ---
         if mech_a.active:
-            a_heat_events = apply_heat_phase(mech_a, a_weapons, debug)
+            a_heat_events = apply_heat_phase(mech_a, a_weapons, debug, heat_factor)
             if debug:
                 log.extend(a_heat_events)
 
         if mech_b.active:
-            b_heat_events = apply_heat_phase(mech_b, b_weapons, debug)
+            b_heat_events = apply_heat_phase(mech_b, b_weapons, debug, heat_factor)
             if debug:
                 log.extend(b_heat_events)
 
@@ -373,7 +378,8 @@ def monte_carlo(mech_a_template: Mech, mech_b_template: Mech,
                 n: int = 10000, distance: int = 6,
                 max_rounds: int = 50,
                 closing_rate: int = 0,
-                movement_ai: str = "closure") -> MonteCarloResult:
+                movement_ai: str = "closure",
+                heat_factor: float = 1.0) -> MonteCarloResult:
     """Run n fights and collect statistics."""
     a_wins = 0
     b_wins = 0
@@ -386,7 +392,8 @@ def monte_carlo(mech_a_template: Mech, mech_b_template: Mech,
         a = mech_a_template.copy()
         b = mech_b_template.copy()
         result = fight(a, b, distance=distance, max_rounds=max_rounds,
-                       closing_rate=closing_rate, movement_ai=movement_ai)
+                       closing_rate=closing_rate, movement_ai=movement_ai,
+                       heat_factor=heat_factor)
 
         if result.winner == "A":
             a_wins += 1

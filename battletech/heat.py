@@ -31,14 +31,18 @@ def calculate_heat_generated(mech: Mech, weapons_fired: list[MountedWeapon]) -> 
     return heat
 
 
-def calculate_heat_dissipation(mech: Mech) -> int:
-    """Calculate heat dissipated by heat sinks."""
+def calculate_heat_dissipation(mech: Mech, heat_factor: float = 1.0) -> int:
+    """Calculate heat dissipated by heat sinks.
+
+    heat_factor scales dissipation: 1.0 = standard, 0.5 = desert, 1.25 = arctic.
+    """
     per_sink = 2 if mech.double_heat_sinks else 1
-    return mech.heat_sinks * per_sink
+    return int(mech.heat_sinks * per_sink * heat_factor)
 
 
 def apply_heat_phase(mech: Mech, weapons_fired: list[MountedWeapon],
-                     debug: bool = False) -> list[str]:
+                     debug: bool = False,
+                     heat_factor: float = 1.0) -> list[str]:
     """Run the heat phase: generate, dissipate, check effects.
 
     Returns list of event strings.
@@ -46,7 +50,7 @@ def apply_heat_phase(mech: Mech, weapons_fired: list[MountedWeapon],
     events: list[str] = []
 
     generated = calculate_heat_generated(mech, weapons_fired)
-    dissipated = calculate_heat_dissipation(mech)
+    dissipated = calculate_heat_dissipation(mech, heat_factor)
 
     mech.current_heat += generated
     mech.current_heat -= dissipated
